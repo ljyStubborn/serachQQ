@@ -11,11 +11,12 @@ function App() {
 		if (Exp.test(val)) {
 			setLoading(true);
 			getQQList({ qq: val }).then((res: any) => {
-				const { status, data, msg } = res;
-				if (status === 200) {
+				const { status, data } = res;
+				if (status === 200 && data?.code === 1) {
 					setData(data);
 				} else {
-					$message.error(msg || "网络开小差");
+          setData({});
+					$message.error(data?.msg || "网络开小差");
 				}
 				setLoading(false);
 			});
