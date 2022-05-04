@@ -17,7 +17,7 @@ export const MessageContainer = () => {
 			const obj = [...pre, option];
 			setTimeout(() => {
 				remove(option);
-			}, 30000);
+			}, 3000);
 			return obj;
 		});
 	};
