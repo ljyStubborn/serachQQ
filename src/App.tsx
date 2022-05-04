@@ -38,7 +38,7 @@ function App() {
 				{Object.keys(data).length > 0 && (
 					<div className='card'>
 						<div className='logo'>
-							<img src={data.qlogo} className='logo'></img>
+							<img src={data.qlogo} className='logo' alt=""></img>
 						</div>
 						<div className='con'>
 							<div className='content'>{data.name}</div>
